@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Olá Amigos c: </title>
+    <style>
+        body{
+            height: 100vh;
+            background-color: rgb(250, 208, 221);
+            margin: 0 0;
+            padding: 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Roboto', sans-serif;
+        }
+        .corpo{
+            background-color: rgb(255, 255, 255);
+            width: 50%;
+            height: 50%;
+            border-radius: 1rem;
+            padding: 1rem;
+            text-align: center;
+        }
+        .botao{
+            background-color: rgb(250, 208, 221);
+            border: 0;
+            border-radius: .3rem;
+            padding: 1rem;
+            font-weight: 700;
+            color: aliceblue;
+            transition: .2s;
+        }
+        .botao:hover{
+            cursor: pointer;
+            color: rgb(247, 66, 123);
+        }
+        .titulo{
+            color: rgb(70, 70, 70);
+        }
+        #mensagem{
+            padding: 1rem;
+            color: rgb(70, 70, 70);
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Oi!! Como se chama?')
+        var grupo = window.prompt('E aí ' + nome + '! me diz aí qual teu grupo preferido')
+        var bias = window.prompt('Legal! e seu fav?')
+    </script>
+
+    <section class="corpo">
+        <h1 class="titulo"> :) Olá <script>document.write(nome)</script> !</h1>
+        <button class="botao" onclick="mensagemshow()">clique aqui...</button>
+        <p id="mensagem"></p>
+    </section>
+
+    <script>
+            var texto = document.querySelector("#mensagem")
+
+                function mensagemshow () {
+                    texto.innerHTML= "Lurinha está aqui para desejar pra você amigo " + nome + " um feliz 2023 e pra dizer que o " + grupo + " e " + bias + " tem orgulho de te ter como fã!"
+        }
+    </script>
+
+</body>
+</html>
